@@ -1,0 +1,6 @@
+{%extends 'base.html' %}
+{% block titulo%} Bienvenido Alumno {% endblock %}
+			{%block navegacion%}
+						<li class="active"><a href="#">Horario</a></li>
+						<li><a href="{% url 'salir' %}">Salir</a></li>
+					{%endblock%}

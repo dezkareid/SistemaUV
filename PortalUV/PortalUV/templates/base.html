@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="/media/css/estilo.css" />
+
+	<link href="/media/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="/media/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<title>{% block titulo %} Titulo {% endblock %}</title>
+</head>
+<body>
+	
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+					{%block navegacion%}
+						<li class="active"><a href="#">Directorio</a></li>
+						<li><a href="#">Como usar</a></li>
+						<li><a href="#">Proyecto UV-gvSIG</a></li>
+						<li><a href="#">Colaboradores</a></li>
+					{%endblock%}
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	{% block contenido %} {% endblock %}
+
+    <footer>
+      <p>&copy; DezkaSoft</p>
+    </footer>
+	
+		<script src="/media/js/jquery.js"></script>
+		<script src="/media/bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>

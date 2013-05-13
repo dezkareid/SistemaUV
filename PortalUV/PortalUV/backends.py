@@ -9,12 +9,12 @@ class UvAuth(object):
             user = Alumno.objects.get(matricula=username)
             if user.check_password(password):
                 return user
-        except User.DoesNotExist:
+        except Alumno.DoesNotExist:
             return None 
 
     def get_user(self, user_id):
         """ Get a User object from the user_id. """
         try:
-            return User.objects.get(pk=user_id)
-        except User.DoesNotExist:
+            return Alumno.objects.get(matricula=user_id)
+        except Alumno.DoesNotExist:
             return None
